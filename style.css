@@ -1,0 +1,285 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+html{
+  font-size:10px;
+  
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+
+:root{
+  --light_blue:#9DC4FF;
+  --dark_blue:#0467FF;
+  --blue:#1296F6;
+  --white:#FFFFFF;
+
+  --time1:0.5s;
+  --time2:1.2s;
+  --time3:1.6s;
+  --time4:2s;
+}
+
+
+#container{
+  position: relative;
+  width:100vw;
+  height:100vh;
+  /* min-width:100px; */
+  /* min-height:1000px; */
+  overflow:scroll;
+  background:radial-gradient(circle, var(--light_blue),var(--dark_blue));
+}
+
+  .notepad{
+    opacity:0;
+    position: absolute;
+    background:var(--blue);
+    border-radius:15px;
+    padding:3px 10px 10px 10px;
+    box-shadow:-3px 4px 10px rgba(0,0,0,0.25);
+    display:flex;
+    flex-direction:column;
+  }
+
+    .notepad_header{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      margin-bottom:5px;
+
+    }
+
+      .header_left{
+        display:flex;
+        flex-wrap:wrap;
+        align-items: center;
+      }
+
+        .header_left>img{
+          width:20px;
+        }
+
+        .header_left>p{
+          color:white;
+          font-size:1.4rem;
+        }
+
+      .header_right{
+        display:flex;
+        flex-wrap:wrap;
+        gap:5px;
+      }
+
+        .header_right>div:first-child{
+          width:20px;
+          height:20px;
+          border:1px solid white;
+          border-radius:5px;
+          box-sizing: border-box;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-end;
+          padding-bottom:3px;
+        }
+
+        .header_right>div:first-child>div{
+          background:white;
+          width:80%;
+          height:2px;
+        }
+
+        .header_right>div:nth-child(2){
+          width:20px;
+          height:20px;
+          border:1px solid white;
+          border-radius:5px;
+          box-sizing: border-box;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-end;
+          padding-bottom:3px;
+        }
+
+          .header_right>div:nth-child(2)>div{
+            border:1px solid white;
+            width:60%;
+            height:55%;
+          }
+
+        .header_right>div:last-child{
+          width:20px;
+          height:20px;
+          border:1px solid white;
+          background:red;
+          color:white;
+          border-radius:5px;
+          box-sizing: border-box;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          font-size:1.4rem;
+        }
+
+    .notepad_body{
+      background:var(--white);
+      height:fit-container;
+      flex:1;
+
+    }
+
+      .body_nav{
+        display:flex;
+        flex-wrap:wrap;
+        align-items: center;
+        gap:10px;
+        border-bottom:1px solid var(--blue);
+        padding:5px 3px;
+      }
+
+
+        .body_nav>p{
+          font-size:1.2rem;
+        }
+
+      .body_body{
+        box-sizing: border-box;
+        padding:15px 10px;
+        font-size:1.5rem;
+        font-weight: bold;
+        line-height:2.1rem;
+      }
+
+        a{
+          color:inherit;
+          text-decoration: none;
+        }
+
+          a:visited {
+            color: inherit;
+          }
+
+
+
+
+
+
+
+.note1{
+  width:700px;
+  height:400px;
+
+  top:20px;
+  left:20px;
+
+  animation: opener forwards;
+  animation-delay: var(--time1);
+}
+
+.body1{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding-right:50px;
+}
+
+
+
+
+.note2{
+  width:700px;
+  height:400px;
+
+  top:200px;
+  left:300px;
+
+  animation: opener forwards;
+  animation-delay: var(--time2);
+}
+
+
+
+
+.note3{
+  width:700px;
+  height:400px;
+
+  top:450px;
+  left:100px;
+
+  animation: opener forwards;
+  animation-delay: var(--time3);
+}
+
+.body3{
+  padding-right: 60px;
+}
+
+  .body3>p{
+    display:inline;
+    font-weight:550;
+  }
+
+  
+.note4{
+  width:500px;
+  height:300px;
+
+  top:50px;
+  left:900px;
+
+  animation: opener forwards;
+  animation-delay: var(--time4);
+}
+
+
+.body4>p{
+  display:inline;
+  font-weight:550;
+}
+
+
+
+
+
+
+
+
+
+/* animations */
+
+
+@keyframes opener {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
